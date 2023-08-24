@@ -6,7 +6,6 @@ on:
   #push: 
   # branches:
   # - main
-    
   workflow_dispatch: #adds a 'run now' button
   
 permissions:
@@ -14,7 +13,7 @@ permissions:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+ # cancel-in-progress: true
 
 jobs:
   build:
@@ -56,11 +55,11 @@ jobs:
         run: sudo chown -R 1001:1001 ${{ github.workspace }}/output_fold
       - name: Download a Build Artifact
         uses: actions/download-artifact@v2.1.1
-        # with:
+        with:
         # Artifact name
-        name: report.pdf
+         name: report1
         # Destination path
-        path: ./github/workflows
+         path: ${{ github.workspace }}/output_fold
       - uses: actions/upload-artifact@v3
         if: always()
         name: Upload Logs

@@ -40,7 +40,7 @@ jobs:
           #CX_APIKEY: ${{ secrets.CANARY_API_KEY }}
         with:
             command: web
-            config: '../Google-Gruyere-a-022023.yaml'
+            config: './Google-Gruyere-a-022023.yaml'
             log_level: info
             #prod
             #base_url: "https://ast.checkmarx.net"

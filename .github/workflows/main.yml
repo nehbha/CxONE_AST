@@ -40,14 +40,14 @@ jobs:
           #CX_APIKEY: ${{ secrets.CANARY_API_KEY }}
         with:
             command: web
-            config: './gin_juice.yaml'
+            config: '../Google-Gruyere-a-022023.yaml'
             log_level: info
             #prod
             #base_url: "https://ast.checkmarx.net"
             #environment_id: "e64ac486-f2e3-486e-8757-fece216af179"
             # canary
             base_url: "https://deu.ast.checkmarx.net"
-            environment_id: "ded618e4-752c-459a-b94a-d8d8917eb2e1"
+            environment_id: "a16956dd-03e2-4831-886b-e4dada382e23"
             fail_on: ""
             verbose: true
             output: ${{ github.workspace }}/output_fold #./output
